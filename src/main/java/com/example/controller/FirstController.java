@@ -19,4 +19,10 @@ public class FirstController {
     public String hello(@PathVariable("firstName") String firstName){
         return "Hello "+firstName+".. Its First Spring boot Trial";
     }
+
+
+    @RequestMapping(value = "/hello/{firstName}/{lastName}")
+    public String printName(@PathVariable("firstName") String firstName,@PathVariable("lastName")String lastName){
+        return "Hello "+firstName+" "+lastName+".. Its First Spring boot Trial";
+    }
 }
